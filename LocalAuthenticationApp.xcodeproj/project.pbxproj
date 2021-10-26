@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9274B3B27286944000B957A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = C9274B3A27286944000B957A /* KeychainAccess */; };
+		C9274B3D27286A00000B957A /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9274B3C27286A00000B957A /* KeychainStorage.swift */; };
 		C978864127270EC300BF17ED /* LocalAuthenticationAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C978864027270EC300BF17ED /* LocalAuthenticationAppApp.swift */; };
 		C978864327270EC300BF17ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C978864227270EC300BF17ED /* ContentView.swift */; };
 		C978864527270EC500BF17ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C978864427270EC500BF17ED /* Assets.xcassets */; };
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C9274B3C27286A00000B957A /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
 		C978863D27270EC300BF17ED /* LocalAuthenticationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalAuthenticationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C978864027270EC300BF17ED /* LocalAuthenticationAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthenticationAppApp.swift; sourceTree = "<group>"; };
 		C978864227270EC300BF17ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9274B3B27286944000B957A /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +100,7 @@
 		C978863F27270EC300BF17ED /* LocalAuthenticationApp */ = {
 			isa = PBXGroup;
 			children = (
+				C9274B3C27286A00000B957A /* KeychainStorage.swift */,
 				C978864027270EC300BF17ED /* LocalAuthenticationAppApp.swift */,
 				C978864227270EC300BF17ED /* ContentView.swift */,
 				C978864427270EC500BF17ED /* Assets.xcassets */,
@@ -146,6 +151,9 @@
 			dependencies = (
 			);
 			name = LocalAuthenticationApp;
+			packageProductDependencies = (
+				C9274B3A27286944000B957A /* KeychainAccess */,
+			);
 			productName = LocalAuthenticationApp;
 			productReference = C978863D27270EC300BF17ED /* LocalAuthenticationApp.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +226,9 @@
 				Base,
 			);
 			mainGroup = C978863427270EC300BF17ED;
+			packageReferences = (
+				C9274B3927286944000B957A /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = C978863E27270EC300BF17ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C978866B27270EEA00BF17ED /* SecretViewModel.swift in Sources */,
+				C9274B3D27286A00000B957A /* KeychainStorage.swift in Sources */,
 				C978864327270EC300BF17ED /* ContentView.swift in Sources */,
 				C978864127270EC300BF17ED /* LocalAuthenticationAppApp.swift in Sources */,
 			);
@@ -425,6 +437,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LocalAuthenticationApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Identify Yourself";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +467,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LocalAuthenticationApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Identify Yourself";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -605,6 +619,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9274B3927286944000B957A /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9274B3A27286944000B957A /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9274B3927286944000B957A /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C978863527270EC300BF17ED /* Project object */;
 }
